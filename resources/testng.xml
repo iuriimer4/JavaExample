@@ -2,7 +2,7 @@
 <suite name="FirstTestSuite" verbose="1" >
   <test name="FirstTest" >
     <classes>
-       <class name="com.dice.FirstTest" >
+       <class name="seleniumpackage" >
         <methods>
         <exclude name="firstTestMethod" />
        </methods>

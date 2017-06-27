@@ -55,8 +55,6 @@ public class TaskSeven {
 		System.out.println("Total numbers of elements " + mainmenu.size());
 		WebElement b;
 		for (int i = 1; i <= mainmenu.size(); i++) {
-			// Waiting for the element to be visible
-
 
 			b = driver.findElement(By.cssSelector("ul#box-apps-menu > li:nth-of-type(" + i + ")"));
 			b.click();
@@ -71,7 +69,7 @@ public class TaskSeven {
             d = driver.findElement(By.cssSelector("#ul.docs > li: nth-of-type("+ c +")"));
             d.click();
 			assertTrue(isElementPresent(By.tagName("h1")));
-            ////
+
 			if (driver.findElement(By.tagName("h1")) != null) {
 				System.out.println("Element h1  is Present");
 			} else {

@@ -2,7 +2,7 @@ package javaexample;
 
 public class ExampleClass {
    private String salary = "4 Thousand";
-   private static int day = 25;
+   private int day = 25;
 
     ExampleClass() {
     }
@@ -30,12 +30,16 @@ public class ExampleClass {
         System.out.println();
 
         ExampleClass d = new ExampleClass("7 Thousdan", 1726);
+        //5
         c.printStaticVariables();
+        //7
         d.printStaticVariables();
         System.out.println();
 
         ExampleClass otherClass = new ExampleClass("6 Thousand", 67);
+        //5
         c.printStaticVariables();
+        //6
         otherClass.printStaticVariables();
 
         /*c.getSalary("4 thousands");
@@ -50,9 +54,9 @@ public class ExampleClass {
 //        return salary;
 //    }
 
-    private static int getDay(int i) {
-        return day;
-    }
+    //private static int getDay(int i) {
+       // return day;
+    //}
 
 
 }

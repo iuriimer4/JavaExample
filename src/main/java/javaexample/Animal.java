@@ -18,4 +18,10 @@ public class Animal {
 
         }
     }
+
+    //@Override
+    public String toString()
+    {
+        return "This animal is " + age + " years old";
+    }
 }

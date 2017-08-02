@@ -11,8 +11,6 @@ public class StaticNonStatic {
     static void third() {}
     static void fourth() {}
 
-
-
     public static void  main (String[] args) {
         StaticNonStatic obj = new StaticNonStatic();
 
@@ -25,8 +23,6 @@ public class StaticNonStatic {
         System.out.println(obj.b);
         System.out.println(StaticNonStatic.c);
         System.out.println(StaticNonStatic.d);
-
-
 
     }
 }

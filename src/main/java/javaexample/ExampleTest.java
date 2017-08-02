@@ -30,6 +30,7 @@ public class ExampleTest  {
         obj.method2();
         obj.method3();
         obj.method4();
+
     }
 
 }

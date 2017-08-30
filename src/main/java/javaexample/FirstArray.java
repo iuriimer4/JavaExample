@@ -12,5 +12,4 @@ public class FirstArray {
         System.out.println("Length of array = " + array.length);
         array[8] = 10;
     }
-
 }

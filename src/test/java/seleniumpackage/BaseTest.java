@@ -1,12 +1,17 @@
 package seleniumpackage;
 
+
+
+
+
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.NoSuchElementException;
 
 public class BaseTest {
 	public WebDriver driver;
@@ -22,11 +27,8 @@ public class BaseTest {
 	}
 	public boolean areElementsPresent(By locator) {
 		return driver.findElements(locator).size() > 0;
-		
 	}
-	
-	
-	
+
 	@Before
 	public void start() {
 		driver = new FirefoxDriver();

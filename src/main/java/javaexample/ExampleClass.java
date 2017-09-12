@@ -21,7 +21,7 @@ public class ExampleClass {
     public void printStaticVariables()
     {
         System.out.println("Salary: " + salary);
-        System.out.println("Day:    " + day);
+        System.out.println("Day:    " + day);  //TODO
     }
 
     public static void main(String[] args) {

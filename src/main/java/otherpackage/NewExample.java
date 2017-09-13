@@ -1,4 +1,4 @@
-package javaexample.otherpackage;
+package otherpackage;
 
 import javaexample.Example;
 import javaexample.ExampleTest;

@@ -17,8 +17,11 @@ public class FirstTest {
         PropertyConfigurator.configure("Log4j.properties1");
 		driver = new FirefoxDriver();
 		driver.get("https://www.w3schools.com/cssref/sel_first-of-type.asp");
-
 		log.info("opened w3 school");
-
 	}
 }
+
+
+
+
+

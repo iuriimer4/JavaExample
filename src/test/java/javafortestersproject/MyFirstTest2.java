@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 
 import static org.junit.Assert.assertEquals;
-
+  ///new
     public class MyFirstTest2 {
 
         @Test

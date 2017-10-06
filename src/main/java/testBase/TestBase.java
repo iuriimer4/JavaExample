@@ -2,6 +2,7 @@ package testBase;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,11 +15,14 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -90,12 +94,28 @@ public class TestBase {
         WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
     public void getScreenShot(String name) {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 
-        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
+        try {
+            String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "src/main/java/com/test/automation/uiAutomation/screenshot/";
+            File destFile = new File((String) reportDirectory + name + " " + formater.format(calendar.getTime()) + ".png");
+            FileUtils.copyFile(srcFile, destFile);
+            Reporter.log("< a href='" + destFile.getAbsolutePath() + "'> <img src= '" + destFile.getAbsolutePath() + "' height='100' width='100'/> </a>");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Iterator<String> getAllWindows() {
+        Set<String> windows = driver.getWindowHandles();
+        Iterator<String> itr = windows.iterator();
+        return itr;
 
     }
+
 }

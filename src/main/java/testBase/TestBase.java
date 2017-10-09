@@ -2,6 +2,7 @@ package testBase;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
@@ -16,6 +17,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -115,7 +119,50 @@ public class TestBase {
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> itr = windows.iterator();
         return itr;
+    }
+
+    @AfterMethod()
+    public void afterMethod(ITestResult result) {
 
     }
 
+    @BeforeMethod()
+    public void beforeMethod() {
+        test = extent.startTest(result.getName());
+        test.log(LogStatus.INFO, result.getName() + " test Started");
+    }
+
+    @AfterClass()
+    public void endTest() {
+        closeBrowser();
+    }
+
+    public void closeBrowser() {
+        //driver.quit();
+        log.info("browser Closed");
+        extent.endTest(test);
+        extent.flush();
+    }
+
+    public WebElement waitForElement(WebDriver driver, WebElement element, long timeOutSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOutSeconds);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        return element;
+    }
+
+    //@Parameters("browser")
+    //@BeforeTest
+    public void launchapp(String browser) {
+
+        if(System.getProperty("os.name").contains("Mac")) {
+            if(browser.equals("chrome")) {
+                //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
+                System.out.println("Executing on CHROME");
+                DesiredCapabilities cap = new DesiredCapabilities();
+                cap.setBrowserName("chrome");
+                String Node = "http://localhost:5001/wd/hub";
+
+            }
+        }
+    }
 }

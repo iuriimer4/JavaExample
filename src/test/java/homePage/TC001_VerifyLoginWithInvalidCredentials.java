@@ -29,8 +29,8 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase {
         log.info("Finish verifyLoginWithInvalidCredentials");
     }
 
-   // @AfterClass
-    //public void endTest() {
-        //driver.close();
-  //  }
+    @AfterClass
+    public void endTest() {
+        driver.close();
+  }
 }

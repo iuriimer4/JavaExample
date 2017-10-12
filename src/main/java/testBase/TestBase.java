@@ -16,13 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 import java.io.*;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -81,7 +78,7 @@ public class TestBase {
                 System.out.println(System.getProperty("user.dir"));
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
                 driver = new ChromeDriver();
-            } else if (browser.equals("forefox")) {
+            } else if (browser.equals("firefox")) {
                 System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
                 DesiredCapabilities d = new DesiredCapabilities();
                 d.setCapability("marionette", false);
@@ -102,15 +99,17 @@ public class TestBase {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void getScreenShot(String name) {
+    public void getScreenShot(WebDriver driver, ITestResult result, String folderName ) {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String methodName = result.getName();
 
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "src/main/java/com/test/automation/uiAutomation/screenshot/";
-            File destFile = new File((String) reportDirectory + name + " " + formater.format(calendar.getTime()) + ".png");
+            File destFile = new File((String) reportDirectory + folderName + " " + formater.format(calendar.getTime()) + ".png");
+
             FileUtils.copyFile(srcFile, destFile);
             Reporter.log("< a href='" + destFile.getAbsolutePath() + "'> <img src= '" + destFile.getAbsolutePath() + "' height='100' width='100'/> </a>");
         } catch (IOException e) {
@@ -142,7 +141,7 @@ public class TestBase {
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         try {
-            String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/com/test/automation/uiAutomation/";
+            String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/";
             File destFile = new File((String) reportDirectory + "/failure_screenshots/" + methodName + "_" + formater.format(calendar.getTime()) + ".png");
 
             FileUtils.copyFile(srcFile, destFile);
@@ -196,13 +195,13 @@ public class TestBase {
         }
     }
 
-    @AfterMethod()
+    @AfterMethod
     public void afterMethod(ITestResult result) { }
 
-    @BeforeMethod()
+    @BeforeMethod
     public void beforeMethod(Method result) {
-        test = extent.startTest(result.getName());
-        test.log(LogStatus.INFO, result.getName() + " test Started"); }
+    test = extent.startTest(result.getName());
+    test.log(LogStatus.INFO, result.getName() + " test Started"); }
 
     @AfterClass(alwaysRun = true)
     public void endTest() {
@@ -222,8 +221,8 @@ public class TestBase {
         return element;
     }
 
-    //@Parameters("browser")
-    //@BeforeTest
+    @Parameters("browser")
+    @BeforeTest
     public void launchapp(String browser) throws IOException {
 
         if (System.getProperty("os.name").contains("Mac")) {
@@ -239,7 +238,7 @@ public class TestBase {
                 loadData();
                 getUrl(OR.getProperty("utl"));
             } else if (browser.equals("firefox")) {
-                //System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+                // System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
                 System.out.println("Executing on Firefox");
                 String Node = "http://localhost:5001/wd/hub";
                 DesiredCapabilities cap = DesiredCapabilities.firefox();
@@ -252,7 +251,7 @@ public class TestBase {
                 throw new IllegalCharException("The browser type is underfined");
             }
         }
-       if (System.getProperty("os.name").contains("Windows")) {
+        if (System.getProperty("os.name").contains("Windows")) {
             if (browser.equals("chrome")) {
                 System.out.println(System.getProperty("user.dir"));
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");

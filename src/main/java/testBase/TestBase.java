@@ -5,13 +5,12 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.xmlbeans.impl.piccolo.io.IllegalCharException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,6 +21,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.*;
+import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -41,6 +43,7 @@ public class TestBase {
     public static ExtentReports extent;
     public static ExtentTest test;
     public ITestResult result;
+    WebDriverWait wait;
 
     public WebDriver getDriver() {
         return driver;
@@ -49,11 +52,11 @@ public class TestBase {
     static {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
-        ExtentReports extend = new ExtentReports(System.getProperty("user.dir") + "/src/main/java/com/test/automation/uiAutomation/report/test" + formater.format(calendar.getTime()) + ".html", false);
+        ExtentReports extend = new ExtentReports(System.getProperty("user.dir") + "/src/main/java/report/test" + formater.format(calendar.getTime()) + ".html", false);
     }
 
     public void loadData() throws IOException {
-        File file = new File(System.getProperty("user.dir") + "/src/main/java/com/test/automation/uiAutomation/config/config.properties");
+        File file = new File(System.getProperty("user.dir") + "/src/main/java/config/config.properties");
         FileInputStream f = new FileInputStream(file);
         OR.load(f);
     }
@@ -91,7 +94,7 @@ public class TestBase {
         log.info("navigating to: " + url);
         driver.get(url);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     public void waitForElement(WebDriver driver, int timeOutInSeconds, WebElement element) {
@@ -115,24 +118,93 @@ public class TestBase {
         }
     }
 
+    public static void highlightMe(WebDriver driver, WebElement element) throws InterruptedException {
+        //Creating JavaScriptExecutor Interface
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //Execute javascript
+        js.executeScript("arguments[0].style.border= '4px solid yellow'", element);
+        Thread.sleep(3000);
+        js.executeScript("arguments[0].style.border= ''", element);
+    }
+
     public Iterator<String> getAllWindows() {
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> itr = windows.iterator();
         return itr;
     }
 
-    @AfterMethod()
-    public void afterMethod(ITestResult result) {
+    public void getScreenShotOnSuccess(WebDriver driver, ITestResult result) {
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_sss");
+
+        String methodName = result.getName();
+
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        try {
+            String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/com/test/automation/uiAutomation/";
+            File destFile = new File((String) reportDirectory + "/failure_screenshots/" + methodName + "_" + formater.format(calendar.getTime()) + ".png");
+
+            FileUtils.copyFile(srcFile, destFile);
+            Reporter.log("<a href='" + destFile.getAbsolutePath() + "'> <img src='" + destFile.getAbsolutePath() + "' height='100' width='100'/> </a>");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
+
+    public String captureScreen(String fileName) {
+        if (fileName == "") {
+            fileName = "blank";
+        }
+        File destFile = null;
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        try {
+            String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/com/test/automation/uiAutomation/screenshot/";
+            destFile = new File((String) reportDirectory + fileName + "_" + formater.format(calendar.getTime()) + ".png");
+
+            FileUtils.copyFile(scrFile, destFile);
+            // This will help us to link the screen shot in testNG report
+            Reporter.log("<a href='" + destFile.getAbsolutePath() + "'> <img src='" + destFile.getAbsolutePath() + "' height='100' width='100'/> </a>");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return destFile.toString();
+    }
+
+    public void log(String data) {
+        log.info(data);
+        Reporter.log(data);
+        test.log(LogStatus.INFO, data);
+    }
+
+    public void getResult(ITestResult result) {
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            test.log(LogStatus.PASS, result.getName() + " test is pass");
+        } else if (result.getStatus() == ITestResult.SKIP) {
+            test.log(LogStatus.SKIP, result.getName() + "test is skipped and skipped reason is" + result.getThrowable());
+        } else if (result.getStatus() == ITestResult.FAILURE) {
+            test.log(LogStatus.ERROR, result.getName() + " test is failed" + result.getThrowable());
+            String screen = captureScreen(" ");
+            test.log(LogStatus.FAIL, test.addScreenCapture(screen));
+        } else if (result.getStatus() == ITestResult.STARTED) {
+            test.log(LogStatus.INFO, result.getName() + " test is started");
+        }
+    }
+
+    @AfterMethod()
+    public void afterMethod(ITestResult result) { }
 
     @BeforeMethod()
-    public void beforeMethod() {
+    public void beforeMethod(Method result) {
         test = extent.startTest(result.getName());
-        test.log(LogStatus.INFO, result.getName() + " test Started");
-    }
+        test.log(LogStatus.INFO, result.getName() + " test Started"); }
 
-    @AfterClass()
+    @AfterClass(alwaysRun = true)
     public void endTest() {
         closeBrowser();
     }
@@ -145,24 +217,75 @@ public class TestBase {
     }
 
     public WebElement waitForElement(WebDriver driver, WebElement element, long timeOutSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutSeconds);
+        wait = new WebDriverWait(driver, timeOutSeconds);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         return element;
     }
 
     //@Parameters("browser")
     //@BeforeTest
-    public void launchapp(String browser) {
+    public void launchapp(String browser) throws IOException {
 
-        if(System.getProperty("os.name").contains("Mac")) {
-            if(browser.equals("chrome")) {
+        if (System.getProperty("os.name").contains("Mac")) {
+            if (browser.equals("chrome")) {
                 //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
                 System.out.println("Executing on CHROME");
-                DesiredCapabilities cap = new DesiredCapabilities();
+                DesiredCapabilities cap = DesiredCapabilities.chrome();
                 cap.setBrowserName("chrome");
                 String Node = "http://localhost:5001/wd/hub";
+                driver = new RemoteWebDriver(new URL(Node), cap);
+                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                //Launch website
+                loadData();
+                getUrl(OR.getProperty("utl"));
+            } else if (browser.equals("firefox")) {
+                //System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+                System.out.println("Executing on Firefox");
+                String Node = "http://localhost:5001/wd/hub";
+                DesiredCapabilities cap = DesiredCapabilities.firefox();
+                cap.setBrowserName("firefox");
+                driver = new RemoteWebDriver(new URL(Node), cap);
+                loadData();
+                getUrl(OR.getProperty("url"));
 
+            } else {
+                throw new IllegalCharException("The browser type is underfined");
             }
+        }
+       if (System.getProperty("os.name").contains("Windows")) {
+            if (browser.equals("chrome")) {
+                System.out.println(System.getProperty("user.dir"));
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+                System.out.println("Executing on Chrome");
+                DesiredCapabilities cap = DesiredCapabilities.chrome();
+                cap.setBrowserName("chrome");
+                String Node = "http://localhost:5555/wd/hub";
+                driver = new RemoteWebDriver(new URL(Node), cap);
+                loadData();
+                getUrl(OR.getProperty("url"));
+            } else if (browser.equals("firefox")) {
+                System.out.println(System.getProperty("user.dir"));
+                System.setProperty("webdriver.gecko.drive", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+                System.out.println("Executing on Firefox");
+                String Node = "http://172.16.123.130:5554/wd/hub";
+                DesiredCapabilities cap = DesiredCapabilities.firefox();
+                cap.setBrowserName("firefox");
+                driver = new RemoteWebDriver(new URL(Node), cap);
+                loadData();
+                getUrl(OR.getProperty("url"));
+            } else if (browser.equalsIgnoreCase("ie")) {
+                System.out.println("Executing on IE");
+                DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
+                cap.setBrowserName("ie");
+                String Node = "http://192.168.0.101:5555/wd/hub";
+                driver = new RemoteWebDriver(new URL(Node), cap);
+                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                //Launch Website
+                getUrl(OR.getProperty("url"));
+            } else {
+                throw new IllegalArgumentException("The Browser Type is Underfined");
+            }
+
         }
     }
 }

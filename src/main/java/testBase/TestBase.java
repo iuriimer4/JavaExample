@@ -3,6 +3,7 @@ package testBase;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import customListener.WebEventListener;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.xmlbeans.impl.piccolo.io.IllegalCharException;
@@ -35,12 +36,12 @@ public class TestBase {
     public WebDriver driver;
 
     // public EventFiringWebDriver driver;
-
+    public WebEventListener eventListener;
     public Properties OR = new Properties();
-    public static ExtentReports extent;
-    public static ExtentTest test;
+    public ExtentReports extent;
+    public ExtentTest test;
     public ITestResult result;
-    WebDriverWait wait;
+
 
     public WebDriver getDriver() {
         return driver;
@@ -70,6 +71,7 @@ public class TestBase {
 
 
     }
+
 
     public void selectBrowser(String browser) {
         System.out.println(System.getProperty("os.name"));
@@ -122,15 +124,15 @@ public class TestBase {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //Execute javascript
         js.executeScript("arguments[0].style.border= '4px solid yellow'", element);
-        Thread.sleep(3000);
         js.executeScript("arguments[0].style.border= ''", element);
+        Thread.sleep(3000);
     }
 
-    public Iterator<String> getAllWindows() {
+   /* public Iterator<String> getAllWindows() {
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> itr = windows.iterator();
         return itr;
-    }
+    }*/
 
     public void getScreenShotOnSuccess(WebDriver driver, ITestResult result) {
         Calendar calendar = Calendar.getInstance();
@@ -216,13 +218,13 @@ public class TestBase {
     }
 
     public WebElement waitForElement(WebDriver driver, WebElement element, long timeOutSeconds) {
-        wait = new WebDriverWait(driver, timeOutSeconds);
+        WebDriverWait wait = new WebDriverWait(driver, timeOutSeconds);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         return element;
     }
 
-    @Parameters("browser")
-    @BeforeTest
+    //@Parameters("browser")
+    //@BeforeTest
     public void launchapp(String browser) throws IOException {
 
         if (System.getProperty("os.name").contains("Mac")) {

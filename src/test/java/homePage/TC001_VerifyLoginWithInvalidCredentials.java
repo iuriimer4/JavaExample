@@ -24,8 +24,8 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase {
     public void verifyLoginWithInvalidCredentials() {
         log.info("Starting verifyLoginWirhInvalidCredentials");
         homePage = new HomePage(driver);
-        homePage.loginToApplication("qateam@sekologistics.com", "$3K0qa2016");
-        Assert.assertEquals(homePage.getInvalidLoginTest(), "invalid Login ");
+        homePage.loginToApplication("qateam@sekologistics.com", "$3K0qa201");
+        Assert.assertFalse(Boolean.parseBoolean(homePage.getInvalidLoginTest()), "invalid Login ");
         log.info("Finish verifyLoginWithInvalidCredentials");
     }
 

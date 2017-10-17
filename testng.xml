@@ -3,6 +3,11 @@
 
 <suite name="Regression Suite">
 
+<listeners>
+    <!-- <listener class-name="com.test.automation.uiAutomation.customListner.Listener"></listener>  -->
+    <listener class-name= "customListener.RetryListener"></listener>
+</listeners>
+
     <test name="homePage">
         <classes>
             <class name="homePage.TC001_VerifyLoginWithInvalidCredentials"></class>

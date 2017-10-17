@@ -10,7 +10,6 @@ import org.testng.Reporter;
 import testBase.TestBase;
 
 
-
 public class WebEventListener extends TestBase implements WebDriverEventListener
 {
 

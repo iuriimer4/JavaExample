@@ -42,7 +42,7 @@ public class TestBase {
         public WebEventListener eventListener;
         public Properties OR = new Properties();
         public static ExtentReports extent;
-        public static ExtentTest test;
+        public ExtentTest test;
         public ITestResult result;
 
         public WebDriver getDriver() {

@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import testBase.TestBase;
+import org.apache.log4j.Logger;
 
-import java.util.logging.Logger;
 
 public class HomePage extends TestBase {
     public static final Logger log = Logger.getLogger(HomePage.class.getName());

@@ -1,0 +1,19 @@
+2017-10-17 11:02:51 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the1time(s).
+2017-10-17 11:02:51 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the2time(s).
+2017-10-17 11:02:51 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the3time(s).
+2017-10-17 11:06:28 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the1time(s).
+2017-10-17 11:06:28 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the2time(s).
+2017-10-17 11:06:28 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the3time(s).
+2017-10-17 11:06:57 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the1time(s).
+2017-10-17 11:06:57 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the2time(s).
+2017-10-17 11:06:57 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the3time(s).
+2017-10-17 11:07:56 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the1time(s).
+2017-10-17 11:07:56 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the2time(s).
+2017-10-17 11:07:56 INFO  Retry:34 - Retrying testverifyLoginWithInvalidCredentialswith statusFAILUREfor the3time(s).
+2017-10-17 15:23:21 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com
+2017-10-17 15:30:24 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com
+2017-10-17 15:32:12 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com
+2017-10-17 15:36:46 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com
+2017-10-17 16:12:27 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com
+2017-10-17 16:39:00 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:25:10 INFO  TestBase:120 - navigating to :-http://qaharmony.myseko.com

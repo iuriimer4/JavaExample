@@ -1,0 +1,68 @@
+2017-10-18 09:27:54,589 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:28:57,806 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:36:32,006 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:36:32,006 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:37:21,743 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:37:21,743 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:44:40,842 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:44:40,842 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:44:46,776 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:44:46,776 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:44:50,316 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:44:50,316 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:46:47,993 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:46:47,993 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:46:53,280 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:46:53,280 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:46:56,624 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:46:56,624 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:46:56,626 - testBase.TestBase -INFO - browser closed
+2017-10-18 09:46:56,626 [main] INFO testBase.TestBase - browser closed
+2017-10-18 09:49:40,332 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:49:40,332 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:49:44,929 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:49:44,929 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:49:45,324 - uiActions.HomePage -INFO - Entered Username:-qateam@sekologistics.comand object is: [[ChromeDriver: chrome on XP (49e9a3d878fff74fd7a7f32fb63a7997)] -> id: UserName]
+2017-10-18 09:49:45,324 [main] INFO uiActions.HomePage - Entered Username:-qateam@sekologistics.comand object is: [[ChromeDriver: chrome on XP (49e9a3d878fff74fd7a7f32fb63a7997)] -> id: UserName]
+2017-10-18 09:49:45,426 - uiActions.HomePage -INFO - Entered password :-$3K0qa11and password is: $3K0qa11
+2017-10-18 09:49:45,426 [main] INFO uiActions.HomePage - Entered password :-$3K0qa11and password is: $3K0qa11
+2017-10-18 09:49:48,104 - uiActions.HomePage -INFO - Clicked on login button:-[[ChromeDriver: chrome on XP (49e9a3d878fff74fd7a7f32fb63a7997)] -> xpath: //input[@class = 'button order nice radius']]
+2017-10-18 09:49:48,104 [main] INFO uiActions.HomePage - Clicked on login button:-[[ChromeDriver: chrome on XP (49e9a3d878fff74fd7a7f32fb63a7997)] -> xpath: //input[@class = 'button order nice radius']]
+2017-10-18 09:49:48,328 - uiActions.HomePage -INFO - error message is:- Invalid Login
+2017-10-18 09:49:48,328 [main] INFO uiActions.HomePage - error message is:- Invalid Login
+2017-10-18 09:49:48,376 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:49:48,376 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:49:48,378 - testBase.TestBase -INFO - browser closed
+2017-10-18 09:49:48,378 [main] INFO testBase.TestBase - browser closed
+2017-10-18 09:52:30,411 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:52:30,411 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:52:39,652 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:52:39,652 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:52:39,986 - uiActions.HomePage -INFO - Entered Username:-qateam@sekologistics.comand object is: [[ChromeDriver: chrome on XP (9bac8c8c5978dfd247da506fc4307de2)] -> id: UserName]
+2017-10-18 09:52:39,986 [main] INFO uiActions.HomePage - Entered Username:-qateam@sekologistics.comand object is: [[ChromeDriver: chrome on XP (9bac8c8c5978dfd247da506fc4307de2)] -> id: UserName]
+2017-10-18 09:52:40,089 - uiActions.HomePage -INFO - Entered password :-$3K0qa11and password is: $3K0qa11
+2017-10-18 09:52:40,089 [main] INFO uiActions.HomePage - Entered password :-$3K0qa11and password is: $3K0qa11
+2017-10-18 09:52:44,075 - uiActions.HomePage -INFO - Clicked on login button:-[[ChromeDriver: chrome on XP (9bac8c8c5978dfd247da506fc4307de2)] -> xpath: //input[@class = 'button order nice radius']]
+2017-10-18 09:52:44,075 [main] INFO uiActions.HomePage - Clicked on login button:-[[ChromeDriver: chrome on XP (9bac8c8c5978dfd247da506fc4307de2)] -> xpath: //input[@class = 'button order nice radius']]
+2017-10-18 09:52:44,146 - uiActions.HomePage -INFO - error message is:- Invalid Login
+2017-10-18 09:52:44,146 [main] INFO uiActions.HomePage - error message is:- Invalid Login
+2017-10-18 09:52:44,163 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:52:44,163 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:52:44,165 - testBase.TestBase -INFO - browser closed
+2017-10-18 09:52:44,165 [main] INFO testBase.TestBase - browser closed
+2017-10-18 09:54:29,113 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:54:29,113 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 09:54:39,734 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:54:39,734 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 09:54:40,071 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (7afefb8ea0afe40f0c47dc0ff0cfc37a)] -> id: UserName]
+2017-10-18 09:54:40,071 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (7afefb8ea0afe40f0c47dc0ff0cfc37a)] -> id: UserName]
+2017-10-18 09:54:40,181 - uiActions.HomePage -INFO -  Entered password :- $3K0qa11 and password is: $3K0qa11
+2017-10-18 09:54:40,181 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa11 and password is: $3K0qa11
+2017-10-18 09:54:43,533 - uiActions.HomePage -INFO -  Clicked on login button :- [[ChromeDriver: chrome on XP (7afefb8ea0afe40f0c47dc0ff0cfc37a)] -> xpath: //input[@class = 'button order nice radius']]
+2017-10-18 09:54:43,533 [main] INFO uiActions.HomePage -  Clicked on login button :- [[ChromeDriver: chrome on XP (7afefb8ea0afe40f0c47dc0ff0cfc37a)] -> xpath: //input[@class = 'button order nice radius']]
+2017-10-18 09:54:43,599 - uiActions.HomePage -INFO - error message is:- User Account is locked out
+2017-10-18 09:54:43,599 [main] INFO uiActions.HomePage - error message is:- User Account is locked out
+2017-10-18 09:54:43,623 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:54:43,623 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 09:54:43,625 - testBase.TestBase -INFO - browser closed
+2017-10-18 09:54:43,625 [main] INFO testBase.TestBase - browser closed

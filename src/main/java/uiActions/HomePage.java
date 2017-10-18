@@ -37,11 +37,11 @@ public class HomePage extends TestBase {
 
     public void loginToApplication(String userName, String password) {
         loginUserName.sendKeys(userName);
-        log("Entered Username:-" + userName + "and object is: " + loginUserName.toString());
+        log(" Entered Username :- " + userName + " and object is: " + loginUserName.toString());
         loginPassword.sendKeys(password);
-        log("Entered password :-" + password + "and password is: " + password.toString());
+        log(" Entered password :- " + password + " and password is: " + password.toString());
         loginButton.click();
-        log("Clicked on login button:-" + loginButton.toString());
+        log(" Clicked on login button :- " + loginButton.toString());
     }
 
     public String getInvalidLoginTest() {

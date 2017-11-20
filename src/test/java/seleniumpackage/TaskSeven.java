@@ -63,18 +63,12 @@ public class TaskSeven {
 
 			// submenu
 			   if (isElementPresent(By.xpath("//ul[@class = 'docs']")));
-			List<WebElement> submenu = driver.findElements(By.xpath("\\ul[@class = 'docs']/li"));
+			List<WebElement> submenu = driver.findElements(By.xpath("//ul[@class = 'docs']/li"));
 			WebElement d;
 			   for (int c = 1; c <= submenu.size(); c++) {
             d = driver.findElement(By.cssSelector("#ul.docs > li: nth-of-type("+ c +")"));
             d.click();
 			assertTrue(isElementPresent(By.tagName("h1")));
-
-			if (driver.findElement(By.tagName("h1")) != null) {
-				System.out.println("Element h1  is Present");
-			} else {
-				System.out.println("Element h1 is Absent");
-			}
 
 		}
 	}

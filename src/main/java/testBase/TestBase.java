@@ -188,7 +188,7 @@ public class TestBase {
             }
         }
 
-        public void getScreenShotOnSucess(WebDriver driver, ITestResult result) {
+        public void getScreenShotOnFailure(WebDriver driver, ITestResult result) {
             Calendar calendar = Calendar.getInstance();
             SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 
@@ -196,7 +196,7 @@ public class TestBase {
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
-                String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/";
+                String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/src/main/java/screenshot/";
                 File destFile = new File((String) reportDirectory + "/failure_screenshots/" + methodName + "_" + formater.format(calendar.getTime()) + ".png");
 
                 FileUtils.copyFile(scrFile, destFile);

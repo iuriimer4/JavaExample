@@ -44,15 +44,15 @@ public class HomePage extends TestBase {
         log(" Clicked on login button :- " + loginButton.toString());
     }
 
-/*public String getInvalidLoginTest() {
+public String getInvalidLoginTest() {
         log("error message is:- " + invalidLogin.getText());
         return invalidLogin.getText();
- }*/
+ }
 
     public boolean verifySignOutDisplay() {
         try {
             signOut.isDisplayed();
-            log("signout is displayed and object is :-" + signOut.toString());
+            log(" signout is displayed and object is :-" + signOut.toString());
             return true;
         } catch (Exception e) {
             return false;

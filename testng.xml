@@ -4,8 +4,9 @@
 <suite name="Regression Suite">
 
 <listeners>
-    <!-- <listener class-name="com.test.automation.uiAutomation.customListner.Listener"></listener>  -->
+    <listener class-name="customListener.Listener"></listener>
     <listener class-name= "customListener.RetryListener"></listener>
+    <listener class-name="customListener.WebEventListener"></listener>
 </listeners>
 
     <test name="homePage">

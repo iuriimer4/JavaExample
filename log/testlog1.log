@@ -168,3 +168,147 @@
 2017-10-18 10:29:25,468 [main] INFO uiActions.HomePage - signout is displayed and object is :-[[ChromeDriver: chrome on XP (2568dc822b86b6f892b912a6c2bc8fb4)] -> css selector: a[href*='/Home/Logoff']]
 2017-10-18 10:29:25,470 - testBase.TestBase -INFO - browser closed
 2017-10-18 10:29:25,470 [main] INFO testBase.TestBase - browser closed
+2017-10-18 12:36:10,458 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:36:10,458 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:36:57,313 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:36:57,313 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:36:57,669 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (cd79afb672cc88ce1a3dc50f22952af1)] -> id: UserName]
+2017-10-18 12:36:57,669 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (cd79afb672cc88ce1a3dc50f22952af1)] -> id: UserName]
+2017-10-18 12:36:57,801 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:36:57,801 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:38:00,320 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:38:00,320 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:38:00,321 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 12:38:00,321 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 12:38:00,374 - uiActions.HomePage -INFO - signout is displayed and object is :-[[ChromeDriver: chrome on XP (cd79afb672cc88ce1a3dc50f22952af1)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-18 12:38:00,374 [main] INFO uiActions.HomePage - signout is displayed and object is :-[[ChromeDriver: chrome on XP (cd79afb672cc88ce1a3dc50f22952af1)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-18 12:38:00,377 - testBase.TestBase -INFO - browser closed
+2017-10-18 12:38:00,377 [main] INFO testBase.TestBase - browser closed
+2017-10-18 12:39:26,196 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:39:26,196 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:39:47,590 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:39:47,590 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:39:47,935 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (d45dbf760f195a75c7c47fded626ddef)] -> id: UserName]
+2017-10-18 12:39:47,935 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (d45dbf760f195a75c7c47fded626ddef)] -> id: UserName]
+2017-10-18 12:39:48,046 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:39:48,046 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:40:35,842 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:40:35,842 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:40:35,842 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-18 12:40:35,842 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-18 12:40:35,887 - uiActions.HomePage -INFO - signout is displayed and object is :-[[ChromeDriver: chrome on XP (d45dbf760f195a75c7c47fded626ddef)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-18 12:40:35,887 [main] INFO uiActions.HomePage - signout is displayed and object is :-[[ChromeDriver: chrome on XP (d45dbf760f195a75c7c47fded626ddef)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-18 12:40:35,891 - testBase.TestBase -INFO - browser closed
+2017-10-18 12:40:35,891 [main] INFO testBase.TestBase - browser closed
+2017-10-18 12:41:20,790 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:41:20,790 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:41:26,031 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:41:26,031 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:41:26,442 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (a7e4a732424eb77dda996a6299ef5a0f)] -> id: UserName]
+2017-10-18 12:41:26,442 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (a7e4a732424eb77dda996a6299ef5a0f)] -> id: UserName]
+2017-10-18 12:41:26,580 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:41:26,580 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:41:45,331 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:41:45,331 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:41:55,864 - testBase.TestBase -INFO - browser closed
+2017-10-18 12:41:55,864 [main] INFO testBase.TestBase - browser closed
+2017-10-18 12:43:20,803 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:43:20,803 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-18 12:43:27,195 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:43:27,195 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-18 12:43:27,631 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (5d202b7d59d0d737f36b84dee2790cf4)] -> id: UserName]
+2017-10-18 12:43:27,631 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (5d202b7d59d0d737f36b84dee2790cf4)] -> id: UserName]
+2017-10-18 12:43:27,756 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:43:27,756 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-18 12:43:45,785 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:43:45,785 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-18 12:43:56,473 - testBase.TestBase -INFO - browser closed
+2017-10-18 12:43:56,473 [main] INFO testBase.TestBase - browser closed
+2017-10-19 13:16:30,195 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-19 13:16:30,195 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-19 13:16:36,129 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 13:16:36,129 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 13:16:36,535 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (70397304e61ea2293eae2d7156305f6c)] -> id: UserName]
+2017-10-19 13:16:36,535 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (70397304e61ea2293eae2d7156305f6c)] -> id: UserName]
+2017-10-19 13:16:36,657 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 13:16:36,657 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 13:16:58,203 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 13:16:58,203 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 13:17:08,886 - testBase.TestBase -INFO - browser closed
+2017-10-19 13:17:08,886 [main] INFO testBase.TestBase - browser closed
+2017-10-19 13:57:09,309 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-19 13:57:09,309 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-19 13:58:15,904 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 13:58:15,904 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 13:58:16,335 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (225ff200bf767365f158ccc8ab347c0e)] -> id: UserName]
+2017-10-19 13:58:16,335 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (225ff200bf767365f158ccc8ab347c0e)] -> id: UserName]
+2017-10-19 13:58:16,465 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 13:58:16,465 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 13:59:39,976 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 13:59:39,976 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 13:59:50,547 - testBase.TestBase -INFO - browser closed
+2017-10-19 13:59:50,547 [main] INFO testBase.TestBase - browser closed
+2017-10-19 14:03:25,050 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-19 14:03:25,050 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-19 14:04:10,517 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 14:04:10,517 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 14:04:11,080 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (018f4446ab2fec9e511008d098161483)] -> id: UserName]
+2017-10-19 14:04:11,080 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (018f4446ab2fec9e511008d098161483)] -> id: UserName]
+2017-10-19 14:04:11,246 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 14:04:11,246 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 14:04:31,362 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 14:04:31,362 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 14:04:42,022 - testBase.TestBase -INFO - browser closed
+2017-10-19 14:04:42,022 [main] INFO testBase.TestBase - browser closed
+2017-10-19 14:08:14,815 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-19 14:08:14,815 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-19 14:08:24,056 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 14:08:24,056 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 14:08:24,447 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (bb3cdb3159cdd6839190b20c75455c0c)] -> id: UserName]
+2017-10-19 14:08:24,447 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (bb3cdb3159cdd6839190b20c75455c0c)] -> id: UserName]
+2017-10-19 14:08:24,568 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 14:08:24,568 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 14:09:21,161 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 14:09:21,161 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 14:09:21,162 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-19 14:09:21,162 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-19 14:09:21,217 - uiActions.HomePage -INFO - signout is displayed and object is :-[[ChromeDriver: chrome on XP (bb3cdb3159cdd6839190b20c75455c0c)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-19 14:09:21,217 [main] INFO uiActions.HomePage - signout is displayed and object is :-[[ChromeDriver: chrome on XP (bb3cdb3159cdd6839190b20c75455c0c)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-19 14:09:21,221 - testBase.TestBase -INFO - browser closed
+2017-10-19 14:09:21,221 [main] INFO testBase.TestBase - browser closed
+2017-10-19 14:11:20,989 - testBase.TestBase -INFO - browser closed
+2017-10-19 14:11:20,989 [main] INFO testBase.TestBase - browser closed
+2017-10-19 14:12:11,646 - testBase.TestBase -INFO - browser closed
+2017-10-19 14:12:11,646 [main] INFO testBase.TestBase - browser closed
+2017-10-19 14:15:16,388 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-19 14:15:16,388 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-19 14:15:21,738 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 14:15:21,738 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-19 14:15:22,100 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (deed9c38b2148f1c39d0367a407f8ce3)] -> id: UserName]
+2017-10-19 14:15:22,100 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (deed9c38b2148f1c39d0367a407f8ce3)] -> id: UserName]
+2017-10-19 14:15:22,233 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 14:15:22,233 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-19 14:15:52,114 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 14:15:52,114 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-19 14:15:52,115 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-19 14:15:52,115 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-19 14:15:52,163 - uiActions.HomePage -INFO - signout is displayed and object is :-[[ChromeDriver: chrome on XP (deed9c38b2148f1c39d0367a407f8ce3)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-19 14:15:52,163 [main] INFO uiActions.HomePage - signout is displayed and object is :-[[ChromeDriver: chrome on XP (deed9c38b2148f1c39d0367a407f8ce3)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-19 14:15:52,166 - testBase.TestBase -INFO - browser closed
+2017-10-19 14:15:52,166 [main] INFO testBase.TestBase - browser closed
+2017-10-23 09:16:59,510 - testBase.TestBase -INFO - navigating to :-http://qaharmony.myseko.com
+2017-10-23 09:16:59,510 [main] INFO testBase.TestBase - navigating to :-http://qaharmony.myseko.com
+2017-10-23 09:17:04,768 - testBase.TestBase -INFO - Starting verifyLoginWirhInvalidCredentials
+2017-10-23 09:17:04,768 [main] INFO testBase.TestBase - Starting verifyLoginWirhInvalidCredentials
+2017-10-23 09:17:05,227 - uiActions.HomePage -INFO -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (d743280d7644d354c9da5338370aa4a8)] -> id: UserName]
+2017-10-23 09:17:05,227 [main] INFO uiActions.HomePage -  Entered Username :- qateam@sekologistics.com and object is: [[ChromeDriver: chrome on XP (d743280d7644d354c9da5338370aa4a8)] -> id: UserName]
+2017-10-23 09:17:05,342 - uiActions.HomePage -INFO -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-23 09:17:05,342 [main] INFO uiActions.HomePage -  Entered password :- $3K0qa2016 and password is: $3K0qa2016
+2017-10-23 09:17:58,999 - uiActions.HomePage -INFO -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-23 09:17:58,999 [main] INFO uiActions.HomePage -  Clicked on login button :- Proxy element for: DefaultElementLocator 'By.xpath: //input[@class = 'button order nice radius']'
+2017-10-23 09:17:58,999 - testBase.TestBase -INFO - Finish verifyLoginWithInvalidCredentials
+2017-10-23 09:17:58,999 [main] INFO testBase.TestBase - Finish verifyLoginWithInvalidCredentials
+2017-10-23 09:17:59,044 - uiActions.HomePage -INFO - signout is displayed and object is :-[[ChromeDriver: chrome on XP (d743280d7644d354c9da5338370aa4a8)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-23 09:17:59,044 [main] INFO uiActions.HomePage - signout is displayed and object is :-[[ChromeDriver: chrome on XP (d743280d7644d354c9da5338370aa4a8)] -> css selector: a[href*='/Home/Logoff']]
+2017-10-23 09:17:59,046 - testBase.TestBase -INFO - browser closed
+2017-10-23 09:17:59,046 [main] INFO testBase.TestBase - browser closed

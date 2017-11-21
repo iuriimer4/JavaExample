@@ -1,4 +1,4 @@
-package seleniumpackage;
+package javafortestersproject;
 
 import org.junit.After;
 import org.junit.Before;

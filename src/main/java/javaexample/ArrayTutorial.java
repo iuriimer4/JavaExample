@@ -16,7 +16,7 @@ public class ArrayTutorial {
             }
             System.out.println("Total is: " + total);
 
-            //Finding trhe largest element
+            //Finding the largest element
             double max = mylist[0];
             for ( int c = 0; c < mylist.length; c++) {
                 if(mylist[c] > max ) max = mylist[c];

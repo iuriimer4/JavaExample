@@ -197,7 +197,7 @@ public static void eight() {
 
     D = b * b  - 4*a*c;
    if(a==0) {
-       System.out.println("a = 0");
+       System.out.println("a can't be 0");
    }else if (D<0) {
        System.out.println("Решений нет");
    }else if(D==0) {

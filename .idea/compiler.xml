@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Automation" />
+        <module name="DiceProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Automation" target="1.8" />
+      <module name="DiceProject" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

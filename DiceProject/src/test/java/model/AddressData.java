@@ -1,4 +1,4 @@
-package qa.dice;
+package model;
 
 public class AddressData {
   private final String firstName;
